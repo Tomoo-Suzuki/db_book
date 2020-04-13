@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  postgres:
+    build:
+      context: .
+    container_name: book_dev_db
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=dev
+      - POSTGRES_PASSWORD=dev
+      - PGPASSWORD=dev
+      - POSTGRES_DB=book_dev
+      - DATABASE_HOST=localhost
+    hostname: postgres
+    restart: always
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d

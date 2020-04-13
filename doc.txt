@@ -1,0 +1,23 @@
+docker-compose build
+
+docker-compose ps
+
+docker-compose up -d
+
+docker-compose exec postgres sh
+
+docker-compose exec postgres bash
+
+psql -U dev book_dev
+
+\q
+\l
+
+psql -l
+
+docker-compose exec postgres psql -h localhost -p 5432 -U book_dev
+
+
+
+psql -h localhost -p 5432 -U postgres
+
