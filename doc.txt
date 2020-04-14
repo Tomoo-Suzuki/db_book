@@ -1,8 +1,10 @@
 docker-compose build
 
-docker-compose ps
-
 docker-compose up -d
+
+docker-compose images
+
+docker-compose ps
 
 docker-compose exec postgres sh
 
@@ -13,11 +15,6 @@ psql -U dev book_dev
 \q
 \l
 
-psql -l
+docker-compose stop
 
-docker-compose exec postgres psql -h localhost -p 5432 -U book_dev
-
-
-
-psql -h localhost -p 5432 -U postgres
-
+docker-compose down --rmi all --volumes
