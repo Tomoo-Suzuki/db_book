@@ -2,19 +2,35 @@ docker-compose build
 
 docker-compose up -d
 
-docker-compose images
+docker-compose exec db_book sh
 
-docker-compose ps
+psql -U admin db_book_dev
 
-docker-compose exec postgres sh
-
-docker-compose exec postgres bash
-
-psql -U dev book_dev
-
-\q
 \l
+\dt
+\d users
+select * from users;
+\q
 
 docker-compose stop
 
 docker-compose down --rmi all --volumes
+
+
+
+docker-compose images
+
+docker-compose ps
+
+docker-compose up -d
+
+==================================
+
+http://127.0.0.1/
+
+
+psql　Access privileges 設定
+
+sudo -u postgres createuser -s tm
+
+psql -q -c 'select * from pg_user' users
