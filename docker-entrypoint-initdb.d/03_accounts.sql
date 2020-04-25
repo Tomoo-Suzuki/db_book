@@ -6,7 +6,7 @@ create table accounts
     first_name varchar not null,
     last_name_kana varchar not null,
     first_name_kana varchar not null,
-    birthday varchar not null,
+    birthday date not null,
     zip varchar not null,
     prefecture varchar not null,
     city varchar not null,

@@ -9,7 +9,7 @@ create table posts
     story varchar not null,
     title_bk varchar,
     story_bk varchar,
-    date_last_modify varchar not null
+    date_last_modify timestamp not null
 );
 
 
