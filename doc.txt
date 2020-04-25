@@ -8,15 +8,15 @@ psql -U admin db_book_dev
 
 \l
 \dt
+
 \d users
+
 select * from users;
 \q
 
 docker-compose stop
 
 docker-compose down --rmi all --volumes
-
-
 
 docker-compose images
 
@@ -26,11 +26,22 @@ docker-compose up -d
 
 ==================================
 
+psql -h ホスト名 -p ポート番号 -U ロール名 -d データベース名
+
+psql -h localhost -p 5432 -U admin -d db_book_dev
+
+==================================
+
 http://127.0.0.1/
 
+\connect db_name
 
-psql　Access privileges 設定
+\du
 
-sudo -u postgres createuser -s tm
+create user ts;
 
-psql -q -c 'select * from pg_user' users
+create role tm login;
+
+alter role ts login;
+
+alter role admin login;
