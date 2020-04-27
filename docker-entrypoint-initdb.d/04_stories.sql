@@ -10,7 +10,7 @@ create table stories
     genre integer not null,
     catch_copy varchar not null,
     synopsis varchar not null,
-    keywords varchar not null,
+    keywords varchar,
     extreme_depiction varchar not null,
     color_type integer not null,
     accept_advertisement bool not null,
