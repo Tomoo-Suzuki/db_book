@@ -1,19 +1,17 @@
-create table users
-(
+create table users (
     no serial not null,
     id varchar not null,
     password varchar not null,
-    user_type integer not null,
-    date_reception timestamp not null
+    user_type integer,
+    date_reception varchar
 );
 
-insert into users
-    (
-    id,
-    password,
-    user_type,
-    date_reception
+insert into
+    users (
+        id,
+        password,
+        user_type,
+        date_reception
     )
 values
-    ('00001', 'kxb1139', 3, '2019-11-12')
-;
+    ('00001', 'kxb1139', 3, '2019-11-12');

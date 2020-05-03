@@ -1,16 +1,15 @@
-create table accounts
-(
+create table accounts (
     no serial not null,
     email varchar primary key not null,
     email_confirm varchar not null,
     id varchar,
     user_type integer,
-    last_name varchar not null,
-    first_name varchar not null,
-    last_name_kana varchar not null,
-    first_name_kana varchar not null,
-    birthday varchar not null,
-    gender integer not null,
+    last_name varchar,
+    first_name varchar,
+    last_name_kana varchar,
+    first_name_kana varchar,
+    birthday varchar,
+    gender integer,
     tel varchar,
     zip varchar,
     prefecture varchar,
@@ -22,27 +21,27 @@ create table accounts
     agree_to_terms bool
 );
 
-insert into accounts
-    (
-    email,
-    email_confirm,
-    id,
-    user_type,
-    last_name,
-    first_name,
-    last_name_kana,
-    first_name_kana,
-    birthday,
-    gender,
-    tel,
-    zip,
-    prefecture,
-    city,
-    address3,
-    building,
-    purpose,
-    magazine,
-    agree_to_terms
+insert into
+    accounts (
+        email,
+        email_confirm,
+        id,
+        user_type,
+        last_name,
+        first_name,
+        last_name_kana,
+        first_name_kana,
+        birthday,
+        gender,
+        tel,
+        zip,
+        prefecture,
+        city,
+        address3,
+        building,
+        purpose,
+        magazine,
+        agree_to_terms
     )
 values
     (
@@ -65,4 +64,4 @@ values
         3,
         false,
         true
-);
+    );
