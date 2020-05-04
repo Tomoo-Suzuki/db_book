@@ -2,7 +2,7 @@ create table accounts (
     no serial not null,
     email varchar primary key not null,
     email_confirm varchar not null,
-    id varchar,
+    id_user varchar,
     user_type integer,
     last_name varchar,
     first_name varchar,
@@ -25,7 +25,7 @@ insert into
     accounts (
         email,
         email_confirm,
-        id,
+        id_user,
         user_type,
         last_name,
         first_name,

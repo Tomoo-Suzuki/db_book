@@ -1,6 +1,6 @@
 create table users (
     no serial not null,
-    id varchar not null,
+    id_user varchar not null,
     password varchar not null,
     user_type integer,
     date_reception varchar
@@ -8,7 +8,7 @@ create table users (
 
 insert into
     users (
-        id,
+        id_user,
         password,
         user_type,
         date_reception
