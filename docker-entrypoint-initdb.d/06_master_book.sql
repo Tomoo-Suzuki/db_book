@@ -3,6 +3,7 @@ create table master_book (
     id_book varchar primary key not null,
     no_title integer,
     name_book varchar not null,
+    point_sales integer,
     genre integer,
     name_genre varchar,
     name_category varchar,

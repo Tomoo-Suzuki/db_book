@@ -31,7 +31,8 @@ insert into
         is_complete,
         is_reserve,
         date_register,
-        date_sales
+        date_sales,
+        point_sales
     )
 values
     (
@@ -60,13 +61,14 @@ values
         25,
         1,
         'http://localhost:8888/assets/9000191122_t.jpg',
-        0,
-        '男性マンガ',
+        10,
+        '創作論・評論',
         false,
         false,
         false,
         '2020-05-03',
-        '2018-01-23'
+        '2018-01-23',
+        17
     ),
     (
         '176156',
@@ -94,11 +96,12 @@ values
         25,
         1,
         'http://localhost:8888/assets/9000188090_t.jpg',
-        0,
-        '男性マンガ',
+        10,
+        '創作論・評論',
         false,
         true,
         false,
         '2020-05-03',
-        '2019_02_24'
+        '2019_02_24',
+        17777
     )

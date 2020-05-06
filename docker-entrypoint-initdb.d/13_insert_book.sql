@@ -31,7 +31,8 @@ insert into
         is_complete,
         is_reserve,
         date_register,
-        date_sales
+        date_sales,
+        point_sales
     )
 values
     (
@@ -60,13 +61,14 @@ values
         25,
         1,
         'http://localhost:8888/assets/9000219864_t.jpg',
-        1,
-        '女性マンガ',
+        6,
+        'ミステリー',
         false,
         false,
         true,
         '2020-05-03',
-        '2018-01-23'
+        '2018-01-23',
+        0
     ),
     (
         '181524',
@@ -94,13 +96,14 @@ values
         25,
         1,
         'http://localhost:8888/assets/9000219865_t.jpg',
-        1,
-        '女性マンガ',
+        6,
+        'ミステリー',
         false,
         true,
         false,
         '2020-05-03',
-        '2018-01-23'
+        '2018-01-23',
+        3
     ),
     (
         '181524',
@@ -128,13 +131,14 @@ values
         25,
         1,
         'http://localhost:8888/assets/9000467166_t.jpg',
-        1,
-        '女性マンガ',
+        6,
+        'ミステリー',
         false,
         false,
         false,
         '2020-05-03',
-        '2018-01-23'
+        '2018-01-23',
+        33
     ),
     (
         '181524',
@@ -162,13 +166,14 @@ values
         25,
         1,
         'http://localhost:8888/assets/9000467167_t.jpg',
-        1,
-        '女性マンガ',
+        6,
+        'ミステリー',
         false,
         false,
         false,
         '2020-05-03',
-        '2018-01-23'
+        '2018-01-23',
+        3333
     ),
     (
         '181524',
@@ -196,11 +201,12 @@ values
         25,
         1,
         'http://localhost:8888/assets/9000467168_t.jpg',
-        1,
-        '女性マンガ',
+        6,
+        'ミステリー',
         false,
         true,
         false,
         '2020-05-03',
-        '2019_02_24'
+        '2019_02_24',
+        333
     )

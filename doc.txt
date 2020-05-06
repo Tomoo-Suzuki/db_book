@@ -4,13 +4,11 @@ docker-compose build --no-cache
 
 docker-compose up -d
 
-docker-compose exec db_book sh
+docker-compose down --rmi all --volumes
 
 psql -U admin db_book_dev
 
 psql -h localhost -p 5432 -U admin -d db_book_dev
-
-docker-compose down --rmi all --volumes
 
 
 \l
