@@ -1,8 +1,6 @@
-
-create table stories
-(
+create table stories (
     no serial not null,
-    id varchar not null,
+    id_user varchar not null,
     id_story varchar not null primary key,
     title_main varchar not null,
     auther_name varchar not null,
@@ -21,27 +19,28 @@ create table stories
     accept_typo_reports bool not null
 );
 
-insert into stories
-    (
-    id,
-    id_story,
-    title_main,
-    auther_name,
-    is_complete,
-    genre,
-    catch_copy,
-    synopsis,
-    keywords,
-    extreme_depiction,
-    color_type,
-    accept_advertisement,
-    accept_rating,
-    accept_reviews,
-    accept_impression,
-    publish_evaluation,
-    accept_typo_reports
+insert into
+    stories (
+        id_user,
+        id_story,
+        title_main,
+        auther_name,
+        is_complete,
+        genre,
+        catch_copy,
+        synopsis,
+        keywords,
+        extreme_depiction,
+        color_type,
+        accept_advertisement,
+        accept_rating,
+        accept_reviews,
+        accept_impression,
+        publish_evaluation,
+        accept_typo_reports
     )
-values(
+values
+    (
         '00001',
         'sf00001',
         'when its love',
@@ -59,5 +58,61 @@ values(
         false,
         true,
         false
-    )
-;
+    ),
+    (
+        '00001',
+        'sf00002',
+        'お寺の娘のキン子とハリウッド薔薇の刺繍があることすら知らない',
+        '昼間𦍌司',
+        true,
+        8,
+        '14歳少女の、若い感性が溢れる普通の一日',
+        '朝、目が覚めるときの気持ちはいじらしく、起きたばかりの私は醜いから嫌だ。夏の訪れを感じ、他界したお父さんのことを思ってみる。お母さんは人のために尽くす人で、私の両親は美しく安らかな夫婦だった。なんて考える私は生意気だ。',
+        '小説,名作',
+        '1,2,3',
+        0,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+    ),
+    (
+        '00001',
+        'dt00006',
+        'よだかの星',
+        '昼間𦍌司',
+        false,
+        2,
+        'いじめられた優しい鳥は、星になった',
+        'よだか（夜鷹・ヨタカ）は醜い鳥であった。顔は味噌をつけたようにまだらで、くちばしは平たく、耳まで裂けている。そのためよだかは他の鳥たちから嫌われ、いじめられていた。',
+        '異世界',
+        '1,4,6',
+        1,
+        true,
+        true,
+        true,
+        false,
+        false,
+        false
+    ),
+    (
+        '00018',
+        'bl00001',
+        '親友の加藤香奈の不審死を間近で見ることになった件',
+        '昼間𦍌司',
+        false,
+        4,
+        '精神的な不倫と、一家崩壊の物語',
+        '矢木波子と夫の元男との間には21歳の娘と大学生の息子がいる。裕福な育ちで理想家めいたところのある波子は、バレエ教室を営んでいる。かつてはプリマドンナとして舞台での活躍を夢見ていたが、今は娘と生徒の育成に勤しんでいる。対して夫の元男は現実主義的な国文学者で、価値観が合わないことが多い。',
+        'ホラー',
+        '2,3,6',
+        0,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true
+    );
