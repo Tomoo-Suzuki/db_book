@@ -1,3 +1,6 @@
+MEMO: 
+test 20240802
+
 docker-compose build
 
 docker-compose build --no-cache
@@ -34,9 +37,7 @@ ping -w 3 book_upload_dev
 ping -w 3 db_book_dev
 ping -w 3 graphql_book_dev
 
-
 ========================================
-
 
 lsof -i:5432 -P
 
